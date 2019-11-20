@@ -7,7 +7,7 @@ It serves as a learning tool to show growth. If I had to do this again I would:
 + not close php files ?>
 + not echo every line (templating engine, like PXP perhaps), 
 + use an SPL autoloader,
-+ a package manager (composure), etc. for Bootstrap
++ a package manager (composer), etc. for Bootstrap
 + KISS
 + Adapt the unix philosophy
 + Consider screen reader
