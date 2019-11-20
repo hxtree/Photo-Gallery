@@ -1,0 +1,23 @@
+/* trail */
+.breadcrumb {
+  display: block;
+  clear: both;
+  font-size: 80%;
+  margin: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  .container {
+    min-height: 1em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .crumb-first {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  a, span {
+    padding: 0px 5px 0px 0px;
+    margin: 0px;
+    color: #1E1E1E;
+  }
+}

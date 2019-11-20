@@ -1,0 +1,17 @@
+# do not include local configuration files
+resources/config/*.conf
+!resources/config/sample.conf
+!resources/config/photo-gallery.conf
+!resources/config/users.conf
+
+# do not include logs
+logs/*.*
+
+# do not include downloads
+download/*
+
+# do not include special assets
+assets/output/*
+!assets/output/.htaccess
+assets/input/*
+!assets/input/.htaccess

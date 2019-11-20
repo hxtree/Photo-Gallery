@@ -1,0 +1,50 @@
+
+/* cover */
+
+.cover {
+  background-color: #FFFFFF;
+  margin: 0px;
+  background-image: url('../images/common/cover.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: right center;
+  min-height: 95%;
+  min-height: 95vh;
+  .container {
+    margin: 0px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .cover {
+    background-image: none;
+  }
+}
+
+.cover {
+  position: relative;
+  -moz-animation-name: fadein;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-duration: 0.5s;
+  -webkit-animation-name: fadein;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fadein;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 0.5s;
+}
+@-moz-keyframes fadein {
+    0% {opacity: 0; filter: blur(100);}
+    100% {opacity: 1; filter: blur(0);}
+}
+@-webkit-keyframes fadein {
+    0% {opacity: 0; filter: blur(0);}
+    100% {opacity: 1; filter: blur(100);}
+}
+@keyframes fadein {
+    0% {opacity: 0; filter: blur(0);}
+    100% {opacity: 1; filter: blur(100);}
+}

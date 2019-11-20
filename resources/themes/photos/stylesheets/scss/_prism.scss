@@ -1,0 +1,290 @@
+//colors
+$black: black;
+$color_curious_blue_approx: #358ccb;
+$color_bon_jour_approx: #dfdfdf;
+$color_romance_approx: #fdfdfd;
+$color_havelock_blue_4_approx: rgba(69, 142, 209, 0.04);
+$color_persian_red_approx: #c92c2c;
+$black_10: rgba(0, 0, 0, 0.1);
+$color_mountain_mist_approx: #979797;
+$color_oslo_gray_approx: #7d8b99;
+$color_storm_dust_approx: #5f6364;
+$color_la_palma_approx: #2f9c0a;
+$color_barley_corn_approx: #a67f59;
+$white_50: rgba(255, 255, 255, 0.5);
+$color_eastern_blue_approx: #1990b8;
+$color_california_approx: #e90;
+$color_westar_approx: #e0d7d1;
+
+//fonts
+$font_0: Consolas;
+$font_1: Monaco;
+$font_2: Andale Mono;
+$font_3: Ubuntu Mono;
+$font_4: monospace;
+
+//@extend-elements
+//original selectors
+//code[class*="language-"], pre[class*="language-"]
+%extend_1 {
+	color: $black;
+	background: none;
+	font-family: $font_0, $font_1, $font_2, $font_3, $font_4;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	//Instead of the line below you could use @include word-break($value)
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+	tab-size: 4;
+	//Instead of the line below you could use @include hyphens($value)
+	hyphens: none;
+}
+
+//original selectors
+//:not(pre) >code[class*="language-"], pre[class*="language-"]
+%extend_2 {
+	background-color: $color_romance_approx;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	margin-bottom: 1em;
+}
+
+//original selectors
+//pre[class*="language-"]:before, pre[class*="language-"]:after
+%extend_3 {
+	content: '';
+	z-index: -2;
+	display: block;
+	position: absolute;
+	bottom: 0.75em;
+	left: 0.18em;
+	width: 40%;
+	height: 20%;
+	max-height: 13em;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 13px 8px $color_mountain_mist_approx;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: rotate(-2deg);
+}
+
+//original selectors
+//:not(pre) >code[class*="language-"]:after, pre[class*="language-"]:after
+%extend_4 {
+	right: 0.75em;
+	left: auto;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform: rotate(2deg);
+}
+
+
+code[class*="language-"] {
+	@extend %extend_1;
+}
+pre[class*="language-"] {
+	@extend %extend_1;
+	position: relative;
+	margin: .5em 0;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: -1px 0 0 0 $color_curious_blue_approx, 0 0 0 1px $color_bon_jour_approx;
+	border-left: 10px solid $color_curious_blue_approx;
+	background-color: $color_romance_approx;
+	background-image: linear-gradient(transparent 50%, $color_havelock_blue_4_approx 50%);
+	background-size: 3em 3em;
+	//Instead of the line below you could use @include background-origin($origin)
+	background-origin: content-box;
+	overflow: visible;
+	padding: 0;
+	@extend %extend_2;
+	&:before {
+		@extend %extend_3;
+	}
+	&:after {
+		@extend %extend_3;
+		@extend %extend_4;
+	}
+	&.line-numbers {
+		padding-left: 0;
+		code {
+			padding-left: 3.8em;
+		}
+		.line-numbers-rows {
+			left: 0;
+		}
+	}
+}
+code[class*="language"] {
+	max-height: inherit;
+	height: 100%;
+	padding: 0 1em;
+	display: block;
+	overflow: auto;
+}
+.token {
+	&.comment {
+		color: $color_oslo_gray_approx;
+	}
+	&.block-comment {
+		color: $color_oslo_gray_approx;
+	}
+	&.prolog {
+		color: $color_oslo_gray_approx;
+	}
+	&.doctype {
+		color: $color_oslo_gray_approx;
+	}
+	&.cdata {
+		color: $color_oslo_gray_approx;
+	}
+	&.punctuation {
+		color: $color_storm_dust_approx;
+	}
+	&.property {
+		color: $color_persian_red_approx;
+	}
+	&.tag {
+		color: $color_persian_red_approx;
+	}
+	&.boolean {
+		color: $color_persian_red_approx;
+	}
+	&.number {
+		color: $color_persian_red_approx;
+	}
+	&.function-name {
+		color: $color_persian_red_approx;
+	}
+	&.constant {
+		color: $color_persian_red_approx;
+	}
+	&.symbol {
+		color: $color_persian_red_approx;
+	}
+	&.deleted {
+		color: $color_persian_red_approx;
+	}
+	&.selector {
+		color: $color_la_palma_approx;
+	}
+	&.attr-name {
+		color: $color_la_palma_approx;
+	}
+	&.string {
+		color: $color_la_palma_approx;
+	}
+	&.char {
+		color: $color_la_palma_approx;
+	}
+	&.function {
+		color: $color_la_palma_approx;
+	}
+	&.builtin {
+		color: $color_la_palma_approx;
+	}
+	&.inserted {
+		color: $color_la_palma_approx;
+	}
+	&.operator {
+		color: $color_barley_corn_approx;
+		background: $white_50;
+	}
+	&.entity {
+		color: $color_barley_corn_approx;
+		background: $white_50;
+		cursor: help;
+	}
+	&.url {
+		color: $color_barley_corn_approx;
+		background: $white_50;
+	}
+	&.variable {
+		color: $color_barley_corn_approx;
+		background: $white_50;
+	}
+	&.atrule {
+		color: $color_eastern_blue_approx;
+	}
+	&.attr-value {
+		color: $color_eastern_blue_approx;
+	}
+	&.keyword {
+		color: $color_eastern_blue_approx;
+	}
+	&.class-name {
+		color: $color_eastern_blue_approx;
+	}
+	&.regex {
+		color: $color_california_approx;
+	}
+	&.important {
+		color: $color_california_approx;
+		font-weight: normal;
+	}
+	&.bold {
+		font-weight: bold;
+	}
+	&.italic {
+		font-style: italic;
+	}
+	&.tab:not(:empty):before {
+		color: $color_westar_approx;
+	}
+	&.cr:before {
+		color: $color_westar_approx;
+	}
+	&.lf:before {
+		color: $color_westar_approx;
+	}
+}
+.namespace {
+	opacity: .7;
+}
+@media screen and(max-width: 767px) {
+	pre[class*="language-"] {
+		&:before {
+			bottom: 14px;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none;
+		}
+		&:after {
+			bottom: 14px;
+			//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+			box-shadow: none;
+		}
+	}
+}
+pre[class*="language-"][data-line] {
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+}
+:not(pre) > code[class*="language-"] {
+	@extend %extend_2;
+	position: relative;
+	padding: .2em;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0.3em;
+	color: $color_persian_red_approx;
+	border: 1px solid $black_10;
+	display: inline;
+	white-space: normal;
+	&:after {
+		@extend %extend_4;
+	}
+}
+.language-css .token.string {
+	color: $color_barley_corn_approx;
+	background: $white_50;
+}
+.style .token.string {
+	color: $color_barley_corn_approx;
+	background: $white_50;
+}
+pre[data-line] code {
+	position: relative;
+	padding-left: 4em;
+}
+pre .line-highlight {
+	margin-top: 0;
+}

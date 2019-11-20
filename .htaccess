@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^/?assets/output/.*/original(\..*)?$ - [F,NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)\.html$ index.php?request=%{REQUEST_URI} [L,QSA]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)\.pdf$ index.php?request=%{REQUEST_URI} [L,QSA]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)\.cvs$ index.php?request=%{REQUEST_URI} [L,QSA]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)\.xml$ index.php?request=%{REQUEST_URI} [L,QSA]
+</IfModule>
+## EXPIRES CACHING ##
+#<FilesMatch "\.(jpg|jpeg|png|gif|swf|woff)$">
+#Header set Cache-Control "max-age=604800, public"
+#</FilesMatch>
+#<FilesMatch "\.(css|js)$">
+#Header set Cache-Control "max-age=604800, public"
+#</FilesMatch>

@@ -1,0 +1,32 @@
+
+/* jumbotron */
+
+.jumbotron {
+  padding: 30px 0px;
+  margin-bottom: 30px 0px;
+  color: inherit;
+  .h1, h1 {
+    color: inherit;
+  }
+  p {
+    margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 200;
+  }
+  > hr {
+    border-top-color: #d5d5d5;
+  }
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .jumbotron {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    .h1, h1 {
+      font-size: 63px;
+    }
+  }
+}

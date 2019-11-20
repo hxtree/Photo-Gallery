@@ -1,0 +1,496 @@
+
+table {
+  background-color: transparent;
+}
+
+caption {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #777;
+  text-align: left;
+}
+
+th {
+  text-align: left;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  > {
+    tbody > tr > {
+      td, th {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+      }
+    }
+    tfoot > tr > {
+      td, th {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+      }
+    }
+    thead > tr > {
+      td {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+      }
+      th {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+        vertical-align: bottom;
+        border-bottom: 2px solid #ddd;
+      }
+    }
+    caption + thead > tr:first-child > {
+      td, th {
+        border-top: 0;
+      }
+    }
+    colgroup + thead > tr:first-child > {
+      td, th {
+        border-top: 0;
+      }
+    }
+    thead:first-child > tr:first-child > {
+      td, th {
+        border-top: 0;
+      }
+    }
+    tbody + tbody {
+      border-top: 2px solid #ddd;
+    }
+  }
+  .table {
+    background-color: #fff;
+  }
+}
+
+.table-condensed > {
+  tbody > tr > {
+    td, th {
+      padding: 5px;
+    }
+  }
+  tfoot > tr > {
+    td, th {
+      padding: 5px;
+    }
+  }
+  thead > tr > {
+    td, th {
+      padding: 5px;
+    }
+  }
+}
+
+.table-bordered {
+  border: 1px solid #ddd;
+  > {
+    tbody > tr > {
+      td, th {
+        border: 1px solid #ddd;
+      }
+    }
+    tfoot > tr > {
+      td, th {
+        border: 1px solid #ddd;
+      }
+    }
+    thead > tr > {
+      td, th {
+        border: 1px solid #ddd;
+      }
+      td, th {
+        border-bottom-width: 2px;
+      }
+    }
+  }
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+.table-hover > tbody > tr:hover {
+  background-color: #f5f5f5;
+}
+
+table {
+  col[class*=col-] {
+    position: static;
+    display: table-column;
+    float: none;
+  }
+  td[class*=col-], th[class*=col-] {
+    position: static;
+    display: table-cell;
+    float: none;
+  }
+}
+
+.table > {
+  tbody > tr {
+    &.active > {
+      td, th {
+        background-color: #f5f5f5;
+      }
+    }
+    > {
+      td.active, th.active {
+        background-color: #f5f5f5;
+      }
+    }
+  }
+  tfoot > tr {
+    &.active > {
+      td, th {
+        background-color: #f5f5f5;
+      }
+    }
+    > {
+      td.active, th.active {
+        background-color: #f5f5f5;
+      }
+    }
+  }
+  thead > tr {
+    &.active > {
+      td, th {
+        background-color: #f5f5f5;
+      }
+    }
+    > {
+      td.active, th.active {
+        background-color: #f5f5f5;
+      }
+    }
+  }
+}
+
+.table-hover > tbody > tr {
+  &.active:hover > {
+    td, th {
+      background-color: #e8e8e8;
+    }
+  }
+  &:hover > .active {
+    background-color: #e8e8e8;
+  }
+  > {
+    td.active:hover, th.active:hover {
+      background-color: #e8e8e8;
+    }
+  }
+}
+
+.table > {
+  tbody > tr {
+    &.success > {
+      td, th {
+        background-color: #dff0d8;
+      }
+    }
+    > {
+      td.success, th.success {
+        background-color: #dff0d8;
+      }
+    }
+  }
+  tfoot > tr {
+    &.success > {
+      td, th {
+        background-color: #dff0d8;
+      }
+    }
+    > {
+      td.success, th.success {
+        background-color: #dff0d8;
+      }
+    }
+  }
+  thead > tr {
+    &.success > {
+      td, th {
+        background-color: #dff0d8;
+      }
+    }
+    > {
+      td.success, th.success {
+        background-color: #dff0d8;
+      }
+    }
+  }
+}
+
+.table-hover > tbody > tr {
+  &.success:hover > {
+    td, th {
+      background-color: #d0e9c6;
+    }
+  }
+  &:hover > .success {
+    background-color: #d0e9c6;
+  }
+  > {
+    td.success:hover, th.success:hover {
+      background-color: #d0e9c6;
+    }
+  }
+}
+
+.table > {
+  tbody > tr {
+    &.info > {
+      td, th {
+        background-color: #d9edf7;
+      }
+    }
+    > {
+      td.info, th.info {
+        background-color: #d9edf7;
+      }
+    }
+  }
+  tfoot > tr {
+    &.info > {
+      td, th {
+        background-color: #d9edf7;
+      }
+    }
+    > {
+      td.info, th.info {
+        background-color: #d9edf7;
+      }
+    }
+  }
+  thead > tr {
+    &.info > {
+      td, th {
+        background-color: #d9edf7;
+      }
+    }
+    > {
+      td.info, th.info {
+        background-color: #d9edf7;
+      }
+    }
+  }
+}
+
+.table-hover > tbody > tr {
+  &.info:hover > {
+    td, th {
+      background-color: #c4e3f3;
+    }
+  }
+  &:hover > .info {
+    background-color: #c4e3f3;
+  }
+  > {
+    td.info:hover, th.info:hover {
+      background-color: #c4e3f3;
+    }
+  }
+}
+
+.table > {
+  tbody > tr {
+    &.warning > {
+      td, th {
+        background-color: #fcf8e3;
+      }
+    }
+    > {
+      td.warning, th.warning {
+        background-color: #fcf8e3;
+      }
+    }
+  }
+  tfoot > tr {
+    &.warning > {
+      td, th {
+        background-color: #fcf8e3;
+      }
+    }
+    > {
+      td.warning, th.warning {
+        background-color: #fcf8e3;
+      }
+    }
+  }
+  thead > tr {
+    &.warning > {
+      td, th {
+        background-color: #fcf8e3;
+      }
+    }
+    > {
+      td.warning, th.warning {
+        background-color: #fcf8e3;
+      }
+    }
+  }
+}
+
+.table-hover > tbody > tr {
+  &.warning:hover > {
+    td, th {
+      background-color: #faf2cc;
+    }
+  }
+  &:hover > .warning {
+    background-color: #faf2cc;
+  }
+  > {
+    td.warning:hover, th.warning:hover {
+      background-color: #faf2cc;
+    }
+  }
+}
+
+.table > {
+  tbody > tr {
+    &.danger > {
+      td, th {
+        background-color: #f2dede;
+      }
+    }
+    > {
+      td.danger, th.danger {
+        background-color: #f2dede;
+      }
+    }
+  }
+  tfoot > tr {
+    &.danger > {
+      td, th {
+        background-color: #f2dede;
+      }
+    }
+    > {
+      td.danger, th.danger {
+        background-color: #f2dede;
+      }
+    }
+  }
+  thead > tr {
+    &.danger > {
+      td, th {
+        background-color: #f2dede;
+      }
+    }
+    > {
+      td.danger, th.danger {
+        background-color: #f2dede;
+      }
+    }
+  }
+}
+
+.table-hover > tbody > tr {
+  &.danger:hover > {
+    td, th {
+      background-color: #ebcccc;
+    }
+  }
+  &:hover > .danger {
+    background-color: #ebcccc;
+  }
+  > {
+    td.danger:hover, th.danger:hover {
+      background-color: #ebcccc;
+    }
+  }
+}
+
+.table-responsive {
+  min-height: .01%;
+  overflow-x: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+    > {
+      .table {
+        margin-bottom: 0;
+        > {
+          tbody > tr > {
+            td, th {
+              white-space: nowrap;
+            }
+          }
+          tfoot > tr > {
+            td, th {
+              white-space: nowrap;
+            }
+          }
+          thead > tr > {
+            td, th {
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+      .table-bordered {
+        border: 0;
+        > {
+          tbody > tr > {
+            td:first-child, th:first-child {
+              border-left: 0;
+            }
+          }
+          tfoot > tr > {
+            td:first-child, th:first-child {
+              border-left: 0;
+            }
+          }
+          thead > tr > {
+            td:first-child, th:first-child {
+              border-left: 0;
+            }
+          }
+          tbody > tr > {
+            td:last-child, th:last-child {
+              border-right: 0;
+            }
+          }
+          tfoot > tr > {
+            td:last-child, th:last-child {
+              border-right: 0;
+            }
+          }
+          thead > tr > {
+            td:last-child, th:last-child {
+              border-right: 0;
+            }
+          }
+          tbody > tr:last-child > {
+            td, th {
+              border-bottom: 0;
+            }
+          }
+          tfoot > tr:last-child > {
+            td, th {
+              border-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+/* headings */
+h1.container {
+  margin-top: 0.33em !important;
+  margin-bottom: 0.8em !important;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-top: 0.67em;
+  margin-bottom: 0.2em;
+}
+
+h1 {
+  font-family:  Helvetica, sans-serif;
+  font-size: 200%;
+  color: #E6E7E8;
+  clear: both;
+  display: block;
+  font-weight: 500;
+  line-height: 1.1;
+  //text-shadow: 2px 4px 3px rgba(229,83,2, 0.6);
+  em {
+    font-style: normal !important;
+    color: #284F37 !important;
+  }
+  >.normal {
+    font-size: 12px !important;
+  }
+  &.center {
+    text-align: center;
+  }
+
+  .small, small {
+    font-size: 65%;
+    font-weight: 400;
+    line-height: 1;
+    color: #777;
+  }
+}
+
+h2 {
+  font-family:  Helvetica, sans-serif;
+  color: #E55302;
+  clear: both;
+  display: block;
+  font-weight: 500;
+  line-height: 1.1;
+  font-size: 160%;
+  &.center {
+    text-align: center;
+  }
+  .small, small {
+    font-weight: 400;
+    line-height: 1;
+    color: #777;
+    font-size: 65%;
+  }
+}
+
+h3 {
+  color: #008178;
+  font-family:  Helvetica, sans-serif;
+  clear: both;
+  display: block;
+  font-weight: 500;
+  line-height: 1.1;
+  font-size: 160%;
+  &.center {
+    text-align: center;
+  }
+  .small, small {
+    font-weight: 400;
+    line-height: 1;
+    color: #777;
+    font-size: 65%;
+  }
+}
+
+h4 {
+  color: #82AFB6;
+  font-family:  Helvetica, sans-serif;
+  clear: both;
+  display: block;
+  font-weight: 500;
+  line-height: 1.1;
+  font-size: 120%;
+  font-weight: 700;
+  &.center {
+    text-align: center;
+  }
+  .small, small {
+    font-weight: 400;
+    line-height: 1;
+    color: #777;
+    font-size: 75%;
+  }
+}
+
+h5 {
+  font-family:  Helvetica, sans-serif;
+  clear: both;
+  display: block;
+  font-weight: 500;
+  line-height: 1.1;
+  font-size: 115%;
+  &.center {
+    text-align: center;
+  }
+  .small, small {
+    font-weight: 400;
+    line-height: 1;
+    color: #777;
+    font-size: 75%;
+  }
+}
+
+h6 {
+  font-family:  Helvetica, sans-serif;
+  clear: both;
+  display: block;
+  font-weight: 500;
+  line-height: 1.1;
+  font-size: 110%;
+  &.center {
+    text-align: center;
+  }
+  .small, small {
+    font-weight: 400;
+    line-height: 1;
+    color: #777;
+    font-size: 75%;
+  }
+}
