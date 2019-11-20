@@ -14,17 +14,11 @@ It serves as a learning tool to show growth. If I had to do this again I would:
 + etc. etc ;-)
 
 # How it Works
-Pages:
-	all web pages are stored in the pages folder
-	a page must be added to the database and a php file to the pages folder before it will be live
-
-Authentication works through LDAP server amd occurs in index.php
-
-add or remove special users in index.php (should separate to config)
-Configurations are stored in resources/config .
-Photo processing is completed using a python script
-  need to add cron job to python script in lib
-    crontab -e
++ All web pages are stored in the pages folder
++ A page must be added to the database and a php file to the pages folder before it will be live
++ Authentication works through LDAP server amd occurs in index.php
++ Configurations are stored in resources/config.
++ Photo processing is completed using a python script need to add cron job to python script in lib, crontab -e
 > */5 * * * * python /var/www/photos/lib/process-files.py
 
 # Requirements:
